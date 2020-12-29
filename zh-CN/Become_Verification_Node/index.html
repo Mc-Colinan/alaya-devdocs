@@ -212,7 +212,7 @@
 <li>请不要将质押账户的所有ATP进行质押，至少保留1个ATP，以备支付后续发起节点管理的交易手续费，比如升级提案的投票，解质押等交易。</li>
 </ul>
 <p>执行命令</p>
-<pre><code class="hljs css language-bash">mtool-client staking --restrictedamount 10000 --keystore <span class="hljs-variable">$MTOOLDIR</span>/keystore/staking.json --config <span class="hljs-variable">$MTOOLDIR</span>/validator/validator_config.json
+<pre><code class="hljs css language-bash">mtool-client staking --config <span class="hljs-variable">$MTOOLDIR</span>/validator/validator_config.json --keystore <span class="hljs-variable">$MTOOLDIR</span>/keystore/staking.json --amount 10000 --benefit_address xxx196278ns22j23awdfj9f2d4vz0pedld8a2fzwwj --delegated_reward_rate 5000 --node_name myNode --website www.mywebsite.com --details myNodeDescription --external_id 121412312
 </code></pre>
 <p>提示：<strong>please input keystore password:</strong> 输入质押钱包的密码，然后回车，如果显示如下信息则代表质押成功：</p>
 <pre><code class="hljs css language-bash">operation finished
