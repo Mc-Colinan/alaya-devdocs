@@ -103,15 +103,31 @@
 </table>
 <p>See more parameters with the command <code>platon --help</code>;</p>
 <h2><a class="anchor" aria-hidden="true" id="join-the-alaya-develop-network"></a><a href="#join-the-alaya-develop-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Join the Alaya Develop Network</h2>
-<p>Anyone and any organization can join the Alaya Develop network.</p>
+<p>The development network provides a development test environment for the developer or node.There may be instability and a network reset.The current version of the development network is 0.15.1, which does not provide PPA installation mode, but only supports binary download and installation.</p>
+<h3><a class="anchor" aria-hidden="true" id="develop-network-related-resources"></a><a href="#develop-network-related-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Develop network related resources</h3>
+<blockquote>
+<ul>
+<li><p>platon：<a href="https://download.alaya.network/alaya/platon/0.15.1/platon">https://download.alaya.network/alaya/platon/0.15.1/platon</a></p></li>
+<li><p>alayakey：<a href="https://download.alaya.network/alaya/platon/0.15.1/alayakey">https://download.alaya.network/alaya/platon/0.15.1/alayakey</a></p></li>
+<li><p>mtool：</p>
+<ul>
+<li>windows：<a href="https://download.alaya.network/alaya/mtool/windows/0.15.1/mtool-setup.exe">https://download.alaya.network/alaya/mtool/windows/0.15.1/mtool-setup.exe</a></li>
+<li>linux：<a href="https://download.alaya.network/alaya/mtool/linux/0.15.1/mtool-client.zip">https://download.alaya.network/alaya/mtool/linux/0.15.1/mtool-client.zip</a></li>
+</ul>
+<blockquote>
+<p>You need to change the chain ID in the configuration file config.properties to the development network chain ID: 201030；</p>
+</blockquote></li>
+<li><p>samurai：</p></li>
+<li><p>Open the RPC URL: <a href="http://47.241.91.2:6789">http://47.241.91.2:6789</a></p></li>
+<li><p>Scan Browser Address: <a href="https://devnetscan.alaya.network">https://devnetscan.alaya.network</a></p></li>
+</ul>
+</blockquote>
 <h3><a class="anchor" aria-hidden="true" id="initialize-the-genesis-block"></a><a href="#initialize-the-genesis-block" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize the genesis block</h3>
 <ul>
 <li><p>Save the genesis block file</p>
 <p>Save the following to the genesis.json file:</p>
 <pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> ~/platon-node &amp;&amp; wget https://download.alaya.network/alaya/platon/0.15.1/genesis.json 
 </code></pre></li>
-</ul>
-<ul>
 <li><p>Initialize the genesis block file</p>
 <p>Executive command:</p>
 <pre><code class="hljs css language-shell">cd ~/platon-node &amp;&amp; platon --datadir ./data init genesis.json
@@ -125,24 +141,17 @@
 <p><strong>Execute the following command to join the Alaya as a validator node</strong></p>
 <pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> ~/platon-node/ &amp;&amp; nohup platon --identity alaya-node --datadir ./data --port 16789 --rpcport 6789 --rpcapi <span class="hljs-string">"db,platon,net,web3,admin,personal"</span> --rpc --nodekey ./data/nodekey --cbft.blskey ./data/blskey --verbosity 1 --rpcaddr 127.0.0.1 --bootnodes enode://48f9ebd7559b7849f80e00d89d87fb92604c74a541a7d76fcef9f2bcc67043042dfab0cfbaeb5386f921208ed9192c403f438934a0a39f4cad53c55d8272e5fb@devnetnode1.alaya.network:16789 --syncmode <span class="hljs-string">"fast"</span> &gt; ./data/platon.log 2&gt;&amp;1 &amp;
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="develop-network-related-resources"></a><a href="#develop-network-related-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Develop network related resources</h3>
-<blockquote>
-<ul>
-<li><p>platon：<a href="https://download.alaya.network/alaya/platon/0.15.1/platon">https://download.alaya.network/alaya/platon/0.15.1/platon</a>；</p></li>
-<li><p>alayakey：<a href="https://download.alaya.network/alaya/platon/0.15.1/alayakey">https://download.alaya.network/alaya/platon/0.15.1/alayakey</a>；</p></li>
-<li><p>mtool：</p>
-<ul>
-<li>windows：<a href="https://download.alaya.network/alaya/mtool/windows/0.15.1/mtool-setup.exe">https://download.alaya.network/alaya/mtool/windows/0.15.1/mtool-setup.exe</a>；</li>
-<li>linux：<a href="https://download.alaya.network/alaya/mtool/linux/0.15.1/mtool-client.zip">https://download.alaya.network/alaya/mtool/linux/0.15.1/mtool-client.zip</a>；</li>
-</ul>
-<blockquote>
-<p>You need to change the chain ID in the configuration file config.properties to the development network chain ID: 201030;</p>
-</blockquote></li>
-<li><p>samurai：</p></li>
-<li><p>Open the RPC URL: <a href="http://47.241.91.2:6789">http://47.241.91.2:6789</a>；</p></li>
-<li><p>Scan Browser Address: <a href="https://devnetscan.alaya.network">https://devnetscan.alaya.network</a>；</p></li>
-</ul>
-</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="other"></a><a href="#other" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other</h3>
+<p>If you need to receive large amount of test ATP, please send an email to <a href="mailto:support@latticex.foundation">support@latticex.foundation</a> according to the format requirements. The email requirements are:</p>
+<pre><code class="hljs css language-toml">Title: Alaya Test Network Token Application
+Name:
+Contact Information:
+WeChat ID (or other instant messaging software) :
+Application amount:
+USES:
+Receipt account:
+Remark:
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="view-node-status"></a><a href="#view-node-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View node status</h2>
 <p>When Alaya is successfully started, under normal circumstances, it will automatically establish a connection with the node closest to it through the node discovery protocol. After the connection is successful, block synchronization will be started. You can determine whether joining the network successfully by looking at the peers of the node and confirming whether the block height of the node is increasing.</p>
 <p>If the key is not generated in advance, the node is automatically generated in the node's data directory at startup. If it is automatically generated, only the node private key and BLS private key will be generated, and the relevant public key will not be automatically generated.</p>
@@ -158,7 +167,7 @@
 </code></pre>
 <p>A series of Alaya network nodes appear in the node list and the block height is increasing, which means the connection is successful! (Since the new node needs to be synchronized, there may be a delay)</p>
 <p>Type exit to exit the console.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/alaya-devdocs/en/Install_Node"><span class="arrow-prev">← </span><span>Install and Deploy a Node</span></a><a class="docs-next button" href="/alaya-devdocs/en/Become_Verification_Node"><span>Upgrade to Validator Node</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#preparation">Preparation</a></li><li><a href="#join-the-alaya-main-network">Join the Alaya Main Network</a><ul class="toc-headings"><li><a href="#start-as-a-validator-node">Start as a validator node</a></li></ul></li><li><a href="#join-the-alaya-develop-network">Join the Alaya Develop Network</a><ul class="toc-headings"><li><a href="#initialize-the-genesis-block">Initialize the genesis block</a></li><li><a href="#start-as-a-validator-node-1">Start as a validator node</a></li><li><a href="#develop-network-related-resources">Develop network related resources</a></li></ul></li><li><a href="#view-node-status">View node status</a><ul class="toc-headings"><li><a href="#enter-alaya-console">Enter <code>Alaya</code> console</a></li><li><a href="#view-peers-of-a-node">View peers of a node</a></li><li><a href="#view-the-current-block-height">View the current block height</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a class="nav-home"><img src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya" width="66" height="58"/></a><div><a href="https://www.alaya.network/?lang=en">Alaya network</a><a href="https://latticex.foundation/home">LatticeX.Foundation</a><a href="https://forum.latticex.foundation/">Forum</a></div><div class="gitstar"><a class="github-button" href="https://github.com/PlatONnetwork/PlatON-Go" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star PlatONnetwork/PlatON-Go on GitHub">Star</a></div></section><section class="copyright">COPYRIGHT  © 2021 Alaya NETWORK.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/alaya-devdocs/en/Install_Node"><span class="arrow-prev">← </span><span>Install and Deploy a Node</span></a><a class="docs-next button" href="/alaya-devdocs/en/Become_Verification_Node"><span>Upgrade to Validator Node</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#preparation">Preparation</a></li><li><a href="#join-the-alaya-main-network">Join the Alaya Main Network</a><ul class="toc-headings"><li><a href="#start-as-a-validator-node">Start as a validator node</a></li></ul></li><li><a href="#join-the-alaya-develop-network">Join the Alaya Develop Network</a><ul class="toc-headings"><li><a href="#develop-network-related-resources">Develop network related resources</a></li><li><a href="#initialize-the-genesis-block">Initialize the genesis block</a></li><li><a href="#start-as-a-validator-node-1">Start as a validator node</a></li><li><a href="#other">Other</a></li></ul></li><li><a href="#view-node-status">View node status</a><ul class="toc-headings"><li><a href="#enter-alaya-console">Enter <code>Alaya</code> console</a></li><li><a href="#view-peers-of-a-node">View peers of a node</a></li><li><a href="#view-the-current-block-height">View the current block height</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a class="nav-home"><img src="/alaya-devdocs/img/alaya-logo.svg" alt="Alaya" width="66" height="58"/></a><div><a href="https://www.alaya.network/?lang=en">Alaya network</a><a href="https://latticex.foundation/home">LatticeX.Foundation</a><a href="https://forum.latticex.foundation/">Forum</a></div><div class="gitstar"><a class="github-button" href="https://github.com/PlatONnetwork/PlatON-Go" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star PlatONnetwork/PlatON-Go on GitHub">Star</a></div></section><section class="copyright">COPYRIGHT  © 2021 Alaya NETWORK.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
