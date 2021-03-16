@@ -2716,7 +2716,7 @@ $ alaya-web3j solidity generate [--javaTypes|--solidityTypes] /path/to/<smart-co
 
 ```java
 // 通过maven或gradle导入console模块
-compile "com.platon.client:console:{version}"
+compile "com.platon.sdk:console:{version}"
 
 String args[] = {"generate", "/path/to/<smart-contract>.bin", "/path/to/<smart-contract>.abi", "-o", "/path/to/src/main/java", "-p" , "com.your.organisation.name"};
 SolidityFunctionWrapperGenerator.run(args);
