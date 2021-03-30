@@ -97,12 +97,12 @@ const siteConfig = {
   //外部链接
   expectUrl:{
     'en':{
-      "Alaya":"https://alaya.network/en",
+      "Alaya":"https://www.alaya.network/en",
       "Foundation":"https://latticex.foundation/home",
       "Forum":"https://forum.latticex.foundation/"
     },
     "zh-CN":{
-      "Alaya":"https://alaya.network/",
+      "Alaya":"https://www.alaya.network/",
       "Foundation":"https://latticex.foundation/home",
       "Forum":"https://forum.latticex.foundation/"
     }
