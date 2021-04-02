@@ -329,7 +329,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="合约开发成本"></a><a href="#合约开发成本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>合约开发成本</h2>
 <h3><a class="anchor" aria-hidden="true" id="概要-1"></a><a href="#概要-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概要</h3>
-<p>在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 <code>Alaya</code> 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 <code>WASN</code> 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 <code>Alaya</code> 的 <code>EVM</code>/<code>WASM</code>虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的<code>SET/GET</code>功能的合约作为小型测试合约，中型合约示例将使用一个开源的<a href="https://github.com/yep/eth-tweet">微博客</a>合约，而大型合约则是一个符合 <code>ERC20</code> 标准的智能合约。</p>
+<p>在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 <code>Alaya</code> 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 <code>WASN</code> 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 <code>Alaya</code> 的 <code>EVM</code>/<code>WASM</code>虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的<code>SET/GET</code>功能的合约作为小型测试合约，中型合约示例将使用一个开源的<a href="https://github.com/yep/eth-tweet">微博客</a>合约，而大型合约则是一个符合 <code>ARC20</code> 标准的智能合约。</p>
 <h4><a class="anchor" aria-hidden="true" id="资源消耗"></a><a href="#资源消耗" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>资源消耗</h4>
 <p><strong>简单set/get合约</strong></p>
 <table>
@@ -353,7 +353,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">中型合约</td><td style="text-align:left">30.07 kb</td><td style="text-align:left">349713</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1748565 <code>gVON</code></td><td style="text-align:left">0.001748565 <code>ATP</code></td></tr>
 </tbody>
 </table>
-<p><strong>ERC20标准Token</strong></p>
+<p><strong>ARC20标准Token</strong></p>
 <table>
 <thead>
 <tr><th style="text-align:left">系统</th><th style="text-align:left">合约级别</th><th style="text-align:left">合约大小</th><th style="text-align:left">消耗Gas</th><th style="text-align:left">Gas 单价</th><th style="text-align:left">能量损耗</th><th style="text-align:left">备注</th></tr>
@@ -414,7 +414,7 @@ CONTRACT SimpleStorage: <span class="hljs-keyword">public</span> platon::Contrac
 PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<span class="hljs-built_in">get</span>))
 </code></pre>
 <p>字节码</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin">查看字节码</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin">查看字节码</a></p>
 <p>字节大小：<code>13882 byte =&gt; 13.55 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本"></a><a href="#创建部署合约成本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>
@@ -440,9 +440,9 @@ PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<sp
 <h3><a class="anchor" aria-hidden="true" id="中型合约示例"></a><a href="#中型合约示例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>中型合约示例</h3>
 <h4><a class="anchor" aria-hidden="true" id="微博客合约"></a><a href="#微博客合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>微博客合约</h4>
 <p><strong>EVM示例代码</strong></p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/account.sol">点击查看微博客账户合约</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/account.sol">点击查看微博客账户合约</a></p>
 <p>字节码</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin">查看字节码</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_evm.bin">查看字节码</a></p>
 <p>字节大小： <code>2130.5 byte =&gt; 2.08 kb</code></p>
 <hr>
 <p><strong>WASM示例代码</strong></p>
@@ -560,7 +560,7 @@ CONTRACT TweetAccount: public platon::Contract
 (caddr)(caddrBalance))
 </code></pre>
 <p>字节码</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin">查看字节码</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin">查看字节码</a></p>
 <p>字节大小： <code>30788</code> byte =&gt; 30.07 kb`</p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本-1"></a><a href="#创建部署合约成本-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>
@@ -584,11 +584,11 @@ CONTRACT TweetAccount: public platon::Contract
 </ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="大型合约示例"></a><a href="#大型合约示例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>大型合约示例</h3>
-<h4><a class="anchor" aria-hidden="true" id="erc20标准token合约"></a><a href="#erc20标准token合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ERC20标准token合约</h4>
+<h4><a class="anchor" aria-hidden="true" id="arc20标准token合约"></a><a href="#arc20标准token合约" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ARC20标准token合约</h4>
 <p><strong>EVM示例代码</strong></p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/token.sol">点击查看ERC20标准的智能合约</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/token.sol">点击查看ARC20标准的智能合约</a></p>
 <p>字节码</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin">查看字节码</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin">查看字节码</a></p>
 <p>字节大小： <code>4557.5 byte =&gt; 4.45 kb</code></p>
 <hr>
 <p><strong>WASM示例代码</strong></p>
@@ -751,7 +751,7 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 (getName)(getDecimals)(getSymbol)(getTotalSupply)(approveAndCall))
 </code></pre>
 <p>字节码</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin">查看字节码</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin">查看字节码</a></p>
 <p>字节大小： <code>36764 byte =&gt; 35.9 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="创建部署合约成本-2"></a><a href="#创建部署合约成本-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建&amp;部署合约成本</h6>

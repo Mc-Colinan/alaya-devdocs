@@ -326,7 +326,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="development-costs"></a><a href="#development-costs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development Costs</h2>
 <h3><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h3>
-<p>In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the Alaya network. <code>EVM</code> and <code>WASM</code>, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the <code>EVM</code>/<code>WASM</code> virtual machine of <code>Alaya</code> with the Ethereum virtual machine. In terms of contracts, a simple <code>SET/GET</code> function contract is used as a small test contract. The medium-sized contract example will use an open source <a href="https://github.com/yep/eth-tweet">Tweet</a> contract The large contract is a smart contract that implements the <code>ERC20</code> standard.</p>
+<p>In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the Alaya network. <code>EVM</code> and <code>WASM</code>, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the <code>EVM</code>/<code>WASM</code> virtual machine of <code>Alaya</code> with the Ethereum virtual machine. In terms of contracts, a simple <code>SET/GET</code> function contract is used as a small test contract. The medium-sized contract example will use an open source <a href="https://github.com/yep/eth-tweet">Tweet</a> contract The large contract is a smart contract that implements the <code>ARC20</code> standard.</p>
 <h4><a class="anchor" aria-hidden="true" id="data-overview"></a><a href="#data-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Overview</h4>
 <p><strong>Simple Storage Contract</strong></p>
 <table>
@@ -350,7 +350,7 @@ var helloworld = new web3.platon.Contract(abi,contractAddr,{vmType: 1 });
 <tr><td style="text-align:left">Alaya-WASM</td><td style="text-align:left">Medium-sized</td><td style="text-align:left">30.07 kb</td><td style="text-align:left">349713</td><td style="text-align:left">5,000,000,000 <code>VON</code></td><td style="text-align:left">1748565 <code>gVON</code></td><td style="text-align:left">0.001748565 <code>ATP</code></td></tr>
 </tbody>
 </table>
-<p><strong>ERC20 Token Contract</strong></p>
+<p><strong>ARC20 Token Contract</strong></p>
 <table>
 <thead>
 <tr><th style="text-align:left">Platform</th><th style="text-align:left">Contract Level</th><th style="text-align:left">Size</th><th style="text-align:left">GasUsed</th><th style="text-align:left">GasPrice</th><th style="text-align:left">Amount</th><th style="text-align:left">Remark</th></tr>
@@ -411,7 +411,7 @@ CONTRACT SimpleStorage: <span class="hljs-keyword">public</span> platon::Contrac
 PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<span class="hljs-built_in">get</span>))
 </code></pre>
 <p>ByteCode</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin">Click to view bincode</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin">Click to view bincode</a></p>
 <p>ByteSize: <code>13882 byte =&gt; 13.55 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="cost"></a><a href="#cost" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cost</h6>
@@ -437,9 +437,9 @@ PLATON_DISPATCH(SimpleStorage,(init)(<span class="hljs-built_in">set</span>)(<sp
 <h3><a class="anchor" aria-hidden="true" id="medium-sized-contract"></a><a href="#medium-sized-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Medium-sized Contract</h3>
 <h4><a class="anchor" aria-hidden="true" id="eth-tweet"></a><a href="#eth-tweet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eth-Tweet</h4>
 <p><strong>EVM Sample Code</strong></p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/account.sol">Click to view code</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/account.sol">Click to view code</a></p>
 <p>ByteCode</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_evm.bin">Click to view bincode</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_evm.bin">Click to view bincode</a></p>
 <p>ByteSize: <code>2130.5 byte =&gt; 2.08 kb</code></p>
 <hr>
 <p><strong>WASM Sample Code</strong></p>
@@ -557,7 +557,7 @@ CONTRACT TweetAccount: public platon::Contract
 (caddr)(caddrBalance))
 </code></pre>
 <p>ByteCode</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin">Click to view bincode</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin">Click to view bincode</a></p>
 <pre><code class="hljs">
 </code></pre>
 <p>ByteSize: <code>30788</code> byte =&gt; 30.07 kb`</p>
@@ -583,11 +583,11 @@ CONTRACT TweetAccount: public platon::Contract
 </ul>
 <hr>
 <h3><a class="anchor" aria-hidden="true" id="large-sized-contract"></a><a href="#large-sized-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Large-sized Contract</h3>
-<h4><a class="anchor" aria-hidden="true" id="erc20-token-contract"></a><a href="#erc20-token-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ERC20 Token Contract</h4>
+<h4><a class="anchor" aria-hidden="true" id="arc20-token-contract"></a><a href="#arc20-token-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ARC20 Token Contract</h4>
 <p><strong>EVM Sample Code</strong></p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/token.sol">Click to view code</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/token.sol">Click to view code</a>)</p>
 <p>ByteCode</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin">Click to view bincode</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin">Click to view bincode</a></p>
 <p>ByteSize: <code>4557.5 byte =&gt; 4.45 kb</code></p>
 <hr>
 <p><strong>WASM Sample Code</strong></p>
@@ -750,7 +750,7 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(<span class="hljs-built_in">transfer<
 (getName)(getDecimals)(getSymbol)(getTotalSupply)(approveAndCall))
 </code></pre>
 <p>ByteCode</p>
-<p><a href="https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin">Click to view bincode</a></p>
+<p><a href="https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin">Click to view bincode</a></p>
 <p>ByteSize: <code>36764 byte =&gt; 35.9 kb</code></p>
 <hr>
 <h6><a class="anchor" aria-hidden="true" id="costs-1"></a><a href="#costs-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Costs</h6>
