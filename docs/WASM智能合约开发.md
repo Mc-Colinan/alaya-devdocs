@@ -327,7 +327,7 @@ Description：
 
 ### Summary
 
-In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the Alaya network. `EVM` and `WASM`, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the `EVM`/`WASM` virtual machine of `Alaya` with the Ethereum virtual machine. In terms of contracts, a simple `SET/GET` function contract is used as a small test contract. The medium-sized contract example will use an open source [Tweet](https://github.com/yep/eth-tweet) contract The large contract is a smart contract that implements the `ERC20` standard.
+In a blockchain system, developing smart contracts based on any public chain system involves the development cost of resource expenditure. For example, deploying/calling smart contracts on the network, energy transfer, pledge/delegation and other operations all require a certain cost. Different blockchain network development costs are different. There are two types of virtual machines running in the Alaya network. `EVM` and `WASM`, the cost of developing smart contracts on different virtual machines is also different. This article will compare the different development costs of small contracts, medium contracts and large contracts in the form of a table. At the same time, we will compare the `EVM`/`WASM` virtual machine of `Alaya` with the Ethereum virtual machine. In terms of contracts, a simple `SET/GET` function contract is used as a small test contract. The medium-sized contract example will use an open source [Tweet](https://github.com/yep/eth-tweet) contract The large contract is a smart contract that implements the `ARC20` standard.
 
 
 #### Data Overview
@@ -349,8 +349,7 @@ In a blockchain system, developing smart contracts based on any public chain sys
 | Ethereum    | Medium-sized   | 2.08 kb  | 621385  | 5,000,000,000 `wei` | 3106925 `Gwei` | 0.003106925 `ETH` |
 | Alaya-WASM | Medium-sized   | 30.07 kb | 349713  | 5,000,000,000 `VON` | 1748565 `gVON` | 0.001748565 `ATP` |
 
-
-**ERC20 Token Contract**
+**ARC20 Token Contract**
 
 | Platform    | Contract Level | Size    | GasUsed | GasPrice            | Amount          | Remark            |
 | :---------- | :------------- | :------ | :------ | :------------------ | :-------------- | :---------------- |
@@ -423,7 +422,7 @@ PLATON_DISPATCH(SimpleStorage,(init)(set)(get))
 
 ByteCode
 
-[Click to view bincode](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin)
+[Click to view bincode](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin)
 
 ByteSize: `13882 byte => 13.55 kb`
 
@@ -457,12 +456,12 @@ Alaya-WASM
 
 **EVM Sample Code**
 
-[Click to view code](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/account.sol)
+[Click to view code](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/account.sol)
 
 
 ByteCode
 
-[Click to view bincode](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_evm.bin)
+[Click to view bincode](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_evm.bin)
 
 
 ByteSize: `2130.5 byte => 2.08 kb`
@@ -588,7 +587,7 @@ PLATON_DISPATCH(TweetAccount,(init)(isAdmin)(tweet)(getTweet)(getLatestTweet)
 
 ByteCode
 
-[Click to view bincode](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin)
+[Click to view bincode](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin)
 
 ```
 
@@ -622,16 +621,16 @@ Alaya-WASM
 
 ### Large-sized Contract 
 
-#### ERC20 Token Contract
+#### ARC20 Token Contract
 
 **EVM Sample Code**
 
-[Click to view code](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/token.sol)
+[Click to view code](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/token.sol))
 
 
 ByteCode
 
-[Click to view bincode](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin)
+[Click to view bincode](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin)
 
 
 ByteSize: `4557.5 byte => 4.45 kb`
@@ -802,7 +801,7 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(transfer)(transferFrom)(approve)(allo
 
 ByteCode
 
-[Click to view bincode](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin)
+[Click to view bincode](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin)
 
 ByteSize: `36764 byte => 35.9 kb`
 
