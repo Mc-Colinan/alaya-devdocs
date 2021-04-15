@@ -42,7 +42,7 @@ mtool-client --version
 
 **step1. 下载MTool安装包**
 
-在在线机器上，复制链接<http://download.alaya.network/alaya/mtool/windows/0.15.0/mtool-setup.exe> 到浏览器下载MTool安装包。
+在在线机器上，复制链接<https://download.alaya.network/alaya/mtool/windows/0.15.0/mtool-setup.exe> 到浏览器下载MTool安装包。
 
 **step2. 安装MTool**
 
@@ -59,7 +59,7 @@ mtool-client --version
 **step1. 下载MTool工具包**
 
 ``` bash
-wget http://download.alaya.network/alaya/mtool/linux/0.15.0/mtool-client.zip
+wget https://download.alaya.network/alaya/mtool/linux/0.15.0/mtool-client.zip
 ```
 
 **step2. 解压MTool工具包**
@@ -73,7 +73,7 @@ wget http://download.alaya.network/alaya/mtool/linux/0.15.0/mtool-client.zip
 >脚本下载到<font color=red>mtool-client</font> 目录下，否则脚本无法找到新版本mtool的路径。
 
 ``` bash
-wget http://download.alaya.network/opensource/scripts/mtool_install.sh
+wget https://download.alaya.network/opensource/scripts/mtool_install.sh
 ```
 
 **step4. 执行命令**
@@ -106,7 +106,7 @@ Windows和Ubuntu下MTool目录使用环境变量有所区别：
 > **注意：**
 >
 > - 后续命令是Ubuntu下的命令格式，Windows下需要把`$MTOOLDIR`修改成`%MTOOLDIR%`；
-> - 如果连接的是测试网，需要修改MTool安装目录下的config.properties配置文件的chainid为201030。
+> - 如果连接的是开发网，需要修改MTool安装目录下的config.properties配置文件的chainid为201030。
 
 ### 创建冷钱包
 
@@ -141,7 +141,7 @@ mtool-client account new staking
 >
 >`atp124xmsmd0uf5cvk7v3s36eytqezqsjfcxscu8yv`：为主网账户地址，以atp开头；
 >
->`atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx`：为测试网账户地址，以atx开头；
+>`atx124xmsmd0uf5cvk7v3s36eytqezqsjfcx67qdhx`：为开发网账户地址，以atx开头；
 >
 >`4630b6d86bc74bffd4ca8cfc18bceec562cb40fc5080c258452a04a69bc1ee07` 为钱包私钥；
 >
@@ -434,11 +434,11 @@ mtool-client staking --config $MTOOLDIR/validator/validator_config.json --addres
 >
 > address: 质押观察钱包路径
 >
-> amount: 质押数，不少于10000atp-质押门槛，小数点不超过8位（使用自由金额质押）
+> amount: 质押数，不少于10000ATP-质押门槛，小数点不超过8位（使用自由金额质押）
 >
-> restrictedamount: 不少于10000atp-质押门槛，小数点不超过8位（使用锁仓余额质押）
+> restrictedamount: 不少于10000ATP-质押门槛，小数点不超过8位（使用锁仓余额质押）
 >
-> autoamount：不少于10000atp-优先使用锁仓余额质押，若锁仓余额不足质押金，再使用自由金额质押
+> autoamount：不少于10000ATP-优先使用锁仓余额质押，若锁仓余额不足质押金，再使用自由金额质押
 >
 > benefit_address：验证节点收益地址
 >

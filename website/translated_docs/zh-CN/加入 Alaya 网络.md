@@ -56,7 +56,7 @@ cd ~/platon-node/ && nohup platon --identity alaya-node --datadir ./data --port 
 
 ## 加入Alaya开发网络
 
-开发网为开发者或节点提供开发测试环境。可能出现不稳定，网络重置的情况。开发网络目前版本为0.15.1，不提供PPA安装方式，仅支持二进制下载安装。
+开发网为开发者或节点提供开发测试环境。可能出现不稳定，网络重置的情况。开发网络目前版本为0.15.1。
 
 ### 开发网络相关资源
 
@@ -64,9 +64,9 @@ cd ~/platon-node/ && nohup platon --identity alaya-node --datadir ./data --port 
 >
 >- alayakey：https://download.alaya.network/alaya/platon/0.15.1/alayakey
 >
->- mtool windows：https://download.alaya.network/alaya/mtool/windows/0.15.1/mtool-setup.exe
+>- mtool windows：https://download.alaya.network/alaya/mtool/windows/0.15.1/alaya_mtool.exe
 >
->- mtool linux：https://download.alaya.network/alaya/mtool/linux/0.15.1/mtool-client.zip
+>- mtool linux：https://download.alaya.network/alaya/mtool/linux/0.15.1/alaya_mtool.zip
 >
 >  > 需要修改配置文件config.properties中的链ID为开发网络链ID：201030
 >
@@ -116,7 +116,7 @@ cd ~/platon-node/ && nohup platon --identity alaya-node --datadir ./data --port 
 
 ### 其他
 
-如果您有领取大额测试ATP的需求，请您按照格式要求发送邮件至support@latticex.foundation，邮件要求：
+如果您有领取大额测试ATP的需求，请您按照格式要求发送邮件至：support@latticex.foundation，邮件要求：
 
 ```toml
  标题：Alaya测试网Token申请

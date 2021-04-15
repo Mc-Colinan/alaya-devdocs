@@ -39,7 +39,7 @@ class Footer extends React.Component {
             </a>
           </div>
           <div className="gitstar">
-            <a class="github-button" href="https://github.com/PlatONnetwork/PlatON-Go" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star PlatONnetwork/PlatON-Go on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/AlayaNetwork/Alaya-Go" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star AlayaNetwork/Alaya-Go on GitHub">Star</a>
             {this.props.config.twitterUsername && (
               <div className="social">
                 <a

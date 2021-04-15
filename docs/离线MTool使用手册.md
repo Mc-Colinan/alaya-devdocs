@@ -42,7 +42,7 @@ Double-click `C:\tools\unins000.exe` to uninstall all old versions of MTool and 
 
 **step1. Download the MTool installation package**
 
-On the online machine, copy the link <http://download.alaya.network/alaya/mtool/windows/0.15.0/mtool-setup.exe> ​​to the browser to download the MTool installation package.
+On the online machine, copy the link <https://download.alaya.network/alaya/mtool/windows/0.15.0/mtool-setup.exe> ​​to the browser to download the MTool installation package.
 
 **step2. Install MTool**
 
@@ -411,11 +411,11 @@ mtool-client staking --config $MTOOLDIR/validator/validator_config.json --addres
 >
 > address: pledge observation wallet file
 >
-> amount: pledge amount, no less than 10000atp- pledge threshold, no more than 8 decimal places (use free amount pledge)
+> amount: pledge amount, no less than 10000ATP-pledge threshold, no more than 8 decimal places (use free amount pledge)
 >
-> restricted amount: not less than 10000atp-pledge threshold, no more than 8 decimal places (using locked balance pledge)
+> restricted amount: not less than 10000ATP-pledge threshold, no more than 8 decimal places (using locked balance pledge)
 >
-> autoamount: Not less than 10000atp-Priority to use the lock-up balance staking, if the lock-up balance is not enough for the staking deposit, then use free amount staking
+> autoamount: Not less than 10000ATP-Priority to use the lock-up balance staking, if the lock-up balance is not enough for the staking deposit, then use free amount staking
 >
 > benefit_address: benefit account to receive block-packing reward and staking reward
 >

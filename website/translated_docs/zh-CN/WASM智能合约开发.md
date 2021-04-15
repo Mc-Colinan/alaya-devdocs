@@ -331,7 +331,7 @@ helloworld.methods.get_message_body(0).call()
 ### 概要
 
 
-在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 `Alaya` 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 `WASN` 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 `Alaya` 的 `EVM`/`WASM`虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的`SET/GET`功能的合约作为小型测试合约，中型合约示例将使用一个开源的[微博客](https://github.com/yep/eth-tweet)合约，而大型合约则是一个符合 `ERC20` 标准的智能合约。
+在区块链系统中，基于任何一条公链系统开发智能合约都涉及资源支出的开发成本。例如，在网络上部署/调用智能合约，进行能量转移，质押/委托等操作都需要花费一定的成本，不同的区块链网络开发成本不一样，在 `Alaya` 网络中运行着两种虚拟机EVM和WASM，在不同虚拟机上上开发智能合约的成本也是不一样的。本手册将重点介绍使用 `WASN` 虚拟机涉及到的成本使用，本文将用表格的形式对比小型合约、中型合约和大型合约的不同开发成本，同时将 `Alaya` 的 `EVM`/`WASM`虚拟机和以太坊虚拟机之间进行对比。在合约方面，使用一个简单的`SET/GET`功能的合约作为小型测试合约，中型合约示例将使用一个开源的[微博客](https://github.com/yep/eth-tweet)合约，而大型合约则是一个符合 `ARC20` 标准的智能合约。
 
 
 #### 资源消耗
@@ -352,8 +352,7 @@ helloworld.methods.get_message_body(0).call()
 | Ethereum   | 中型合约 | 2.08 kb  | 621385  | 5,000,000,000 `wei` | 3106925 `Gwei` | 0.003106925 `ETH` |
 | Alaya-WASM | 中型合约 | 30.07 kb | 349713  | 5,000,000,000 `VON` | 1748565 `gVON` | 0.001748565 `ATP` |
 
-
-**ERC20标准Token**
+**ARC20标准Token**
 
 | 系统       | 合约级别 | 合约大小 | 消耗Gas | Gas 单价            | 能量损耗        | 备注              |
 | :--------- | :------- | :------- | :------ | :------------------ | :-------------- | :---------------- |
@@ -426,7 +425,7 @@ PLATON_DISPATCH(SimpleStorage,(init)(set)(get))
 
 字节码
 
-[查看字节码](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin)
+[查看字节码](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/SimpleStorage_wasm.bin)
 
 字节大小：`13882 byte => 13.55 kb`
 
@@ -460,12 +459,12 @@ Alaya-WASM
 
 **EVM示例代码**
 
-[点击查看微博客账户合约](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/account.sol)
+[点击查看微博客账户合约](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/account.sol)
 
 
 字节码
 
-[查看字节码](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin)
+[查看字节码](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_evm.bin)
 
 
 字节大小： `2130.5 byte => 2.08 kb`
@@ -591,7 +590,7 @@ PLATON_DISPATCH(TweetAccount,(init)(isAdmin)(tweet)(getTweet)(getLatestTweet)
 
 字节码
 
-[查看字节码](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin)
+[查看字节码](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Tweet_wasm.bin)
 
 字节大小： `30788` byte => 30.07 kb`
 
@@ -621,16 +620,16 @@ Alaya-WASM
 
 ### 大型合约示例 
 
-#### ERC20标准token合约
+#### ARC20标准token合约
 
 **EVM示例代码**
 
-[点击查看ERC20标准的智能合约](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/token.sol)
+[点击查看ARC20标准的智能合约](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/docs/SmartDevelopment.assets/token.sol)
 
 
 字节码
 
-[查看字节码](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin)
+[查看字节码](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_evm.bin)
 
 
 字节大小： `4557.5 byte => 4.45 kb`
@@ -801,7 +800,7 @@ PLATON_DISPATCH(LATToken,(init)(balanceOf)(transfer)(transferFrom)(approve)(allo
 
 字节码
 
-[查看字节码](https://github.com/PlatONnetwork/alaya-devdocs/blob/master/zh-cn/Development/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin)
+[查看字节码](https://github.com/AlayaNetwork/alaya-devdocs/blob/main/website/translated_docs/zh-CN/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%BC%80%E5%8F%91.assets/Token_wasm.bin)
 
 
 字节大小： `36764 byte => 35.9 kb`

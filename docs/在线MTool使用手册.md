@@ -4,6 +4,13 @@ title: OnLine MTool Tutorials
 sidebar_label: OnLine MTool Tutorials
 ---
 
+## Introductory
+
+To facilitate transfer, pledge, delegate, and governance operations, Alaya provides MTool to assist users:
+
+- MTool supports Ubuntu 18.04 and Windows 10. This document describes the installation and use of Windows and Ubuntu, respectively. Users can choose from their own resources.
+- MTool provides two signature methods for transactions such as pledge: online signature and offline signature.This document describes online signing operations. For offline signing operations, refer to the [Offline MTool Manual](/alaya-devdocs/en/OffLine_MTool_Manual)。
+
 ## Install MTool
 
 In addition, this document introduces the operation of MTool under Windows and Ubuntu respectively. Users can choose according to their own resources.
@@ -34,7 +41,7 @@ Double-click `C:\tools\unins000.exe` to uninstall all old versions of MTool and 
 
 **Step1. Download MTool installation package**
 
-On the online machine, copy the link http://download.alaya.network/alaya/mtool/windows/0.15.0/mtool-setup.exe  to the browser and download the MTool installation package.
+On the online machine, copy the link https://download.alaya.network/alaya/mtool/windows/0.15.0/mtool-setup.exe  to the browser and download the MTool installation package.
 
 **Step2. Install MTool**
 
@@ -292,11 +299,11 @@ SUCCESS
 >
 > keystore: staking wallet file
 >
-> amount: staking amount, not less than 10000atp-staking threshold, no more than 8 decimal places
+> amount: staking amount, not less than 10000ATP-staking threshold, no more than 8 decimal places
 >
-> restrictedamount: not less than 10000atp- staking threshold, no more than 8 decimal points (staking using locked balance)
+> restrictedamount: not less than 10000ATP-staking threshold, no more than 8 decimal points (staking using locked balance)
 >
-> autoamount: Not less than 10000atp-Priority to use the lock-up balance staking, if the lock-up balance is not enough for the staking deposit, then use free amount staking
+> autoamount: Not less than 10000ATP-Priority to use the lock-up balance staking, if the lock-up balance is not enough for the staking deposit, then use free amount staking
 >
 > benefit_address: benefit account to receive block-packing reward and staking reward
 >

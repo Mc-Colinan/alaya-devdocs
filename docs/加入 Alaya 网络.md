@@ -55,7 +55,7 @@ See more parameters with the command `platon --help`;
 
 ## Join the Alaya Develop Network
 
-The development network provides a development test environment for the developer or node.There may be instability and a network reset.The current version of the development network is 0.15.1, which does not provide PPA installation mode, but only supports binary download and installation.
+The development network provides a development test environment for the developer or node.There may be instability and a network reset.The current version of the development network is 0.15.1.
 
 ### Develop network related resources
 
@@ -63,9 +63,9 @@ The development network provides a development test environment for the develope
 >
 > - alayakey：https://download.alaya.network/alaya/platon/0.15.1/alayakey
 >
-> - mtool windows：https://download.alaya.network/alaya/mtool/windows/0.15.1/mtool-setup.exe
+> - mtool windows：https://download.alaya.network/alaya/mtool/windows/0.15.1/alaya_mtool.exe
 >
-> - mtool linux：https://download.alaya.network/alaya/mtool/linux/0.15.1/mtool-client.zip
+> - mtool linux：https://download.alaya.network/alaya/mtool/linux/0.15.1/alaya_mtool.zip
 >
 >   > You need to change the chain ID in the configuration file config.properties to the development network chain ID: 201030；
 >
