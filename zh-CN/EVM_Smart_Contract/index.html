@@ -617,7 +617,7 @@ Compiled successfully using: <span class="hljs-comment">//表示编译成功</sp
 <pre><code class="hljs">pragma solidity ^<span class="hljs-number">0.5</span><span class="hljs-number">.17</span>;
 
 contract CrowdFunding {
-    address payable <span class="hljs-keyword">public</span> beneficiaryAddress = address(<span class="hljs-number">0x0</span>); <span class="hljs-comment">//受益人地址，设置为合约创建者</span>
+    address payable <span class="hljs-keyword">public</span> beneficiaryAddress = address(uint160(<span class="hljs-number">0</span>)); <span class="hljs-comment">//受益人地址，设置为合约创建者</span>
     uint256 <span class="hljs-keyword">public</span> fundingGoal = <span class="hljs-number">100</span> atp;  <span class="hljs-comment">//众筹目标，单位是ATP</span>
     uint256 <span class="hljs-keyword">public</span> amountRaised = <span class="hljs-number">0</span>; <span class="hljs-comment">//已筹集金额数量， 单位是VON</span>
     uint256 <span class="hljs-keyword">public</span> deadline; <span class="hljs-comment">//截止时间</span>

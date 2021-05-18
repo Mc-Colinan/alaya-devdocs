@@ -597,7 +597,7 @@ contract ERC200513Token {
 <pre><code class="hljs">pragma solidity ^<span class="hljs-number">0.5</span><span class="hljs-number">.17</span>;
 
 contract CrowdFunding {
-    address payable <span class="hljs-keyword">public</span> beneficiaryAddress = address(<span class="hljs-number">0x0</span>); <span class="hljs-comment">//Beneficiary address, set as contract creator</span>
+    address payable <span class="hljs-keyword">public</span> beneficiaryAddress = address(unit160(<span class="hljs-number">0</span>)); <span class="hljs-comment">//Beneficiary address, set as contract creator</span>
     uint256 <span class="hljs-keyword">public</span> fundingGoal = <span class="hljs-number">100</span> atp;  <span class="hljs-comment">//Crowdfunding target, unit is ATP</span>
     uint256 <span class="hljs-keyword">public</span> amountRaised = <span class="hljs-number">0</span>; <span class="hljs-comment">//The amount of money raised,the unit is VON</span>
     uint256 <span class="hljs-keyword">public</span> deadline; 
