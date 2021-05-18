@@ -631,7 +631,7 @@ There are two roles in the contract
 pragma solidity ^0.5.17;
 
 contract CrowdFunding {
-    address payable public beneficiaryAddress = address(0x0); //Beneficiary address, set as contract creator
+    address payable public beneficiaryAddress = address(unit160(0)); //Beneficiary address, set as contract creator
     uint256 public fundingGoal = 100 atp;  //Crowdfunding target, unit is ATP
     uint256 public amountRaised = 0; //The amount of money raised,the unit is VON
     uint256 public deadline; 

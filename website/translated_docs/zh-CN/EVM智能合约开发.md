@@ -643,7 +643,7 @@ Summary
 pragma solidity ^0.5.17;
 
 contract CrowdFunding {
-    address payable public beneficiaryAddress = address(0x0); //受益人地址，设置为合约创建者
+    address payable public beneficiaryAddress = address(uint160(0)); //受益人地址，设置为合约创建者
     uint256 public fundingGoal = 100 atp;  //众筹目标，单位是ATP
     uint256 public amountRaised = 0; //已筹集金额数量， 单位是VON
     uint256 public deadline; //截止时间
